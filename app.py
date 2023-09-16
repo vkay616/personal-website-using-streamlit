@@ -1,7 +1,7 @@
 import streamlit as st 
 from streamlit_option_menu import option_menu
 from PIL import Image
-
+from courses import all_courses
 
 st.set_page_config(page_title="Vinay Khanduri | Python Developer", layout="wide")
 
@@ -13,6 +13,12 @@ def local_css(file_name):
 
 local_css("style/style.css")
 home_img = Image.open("images/2206.jpg")
+vit_img = Image.open("images/vit.jpg")
+bbps_img = Image.open("images/bbps.png")
+udemy_img = Image.open("images/udemy.jpeg")
+coursera_img = Image.open("images/coursera.jpeg")
+linkedin_img = Image.open("images/linkedin.jpeg")
+google_img = Image.open("images/google.jpeg")
 
 
 selected = option_menu(None, ["Home", "Education", "Experience", "Projects"], 
@@ -79,7 +85,62 @@ if selected == "Home":
 
 
 if selected == "Education":
-    st.write("Education")
+    st.markdown("<h3 style='text-align:center;'>EDUCATION</h3> <br>", unsafe_allow_html=True)
+
+    img_col1, detail_col1 = st.columns([1, 17])
+
+    with img_col1:
+        st.image(vit_img, use_column_width=True)
+
+    with detail_col1:
+        st.markdown("<p class='degree'><strong>Bachelor of Technology in Electronics and Instrumentation</strong><br><em>Vellore Institute of Technology, Vellore &nbsp; | &nbsp; CGPA: 7.95/10</em><br>2019 - 2023</p>", unsafe_allow_html=True)
+
+        st.markdown("<strong>Relevant Courses</strong><br> 📍 Python Programming <br> 📍 Object Oriented Programming with C++ <br> 📍 Data Structures and Algorithms<br>📍 Neural Networks and Fuzzy Control<br>📍 Statistics and Probability using R<br>📍 Java", unsafe_allow_html=True)
+
+        st.markdown("<strong>Clubs and Activities</strong><br>📍 Core Member, Design @ <strong><a style='color:#ff4b4b;' href='https://www.linkedin.com/company/the-next-chapter-vit/'>The Next Chapter</a></strong><br>📍 Core Member, Technical @ <strong><a style='color:#ff4b4b;' href='https://www.linkedin.com/company/soft-computing-research-society-vit/'>Soft Computing Research Society</a></strong><br>📍 Published 2 conference papers titled <strong><a style='color:#ff4b4b;' href='https://ieeexplore.ieee.org/document/9984343'>Kyphosis Disease Prediction with help of RandomizedSearchCV and AdaBoosting</a></strong> and <strong><a style='color:#ff4b4b;' href='https://drive.google.com/file/d/1IE3JFF3g9hSxhW_8hX2nZKzZF-mDjw_U/view'>Short-Term Electrical Load Forecasting using ARIMA and LSTM</a></strong><br>📍 Participated in a lot of hackathons like HackHarvard, ShellHacks, Amazon ML Challenge, Flipkart Grid and other competitions like L&T's Techgium throughout my college years<br>📍 Student Volunteer @ <strong><a href='https://www.linkedin.com/company/national-youth-council-of-india/' style='color: #ff4b4b;'>National Youth Council of India</a></strong>", unsafe_allow_html=True)
+
+        st.write("---")
+
+    img_col2, detail_col2 = st.columns([1, 17])
+
+    with img_col2:
+        st.image(bbps_img, use_column_width=True)
+
+    with detail_col2:
+        st.markdown("<p class='degree'><strong>Class XII, CBSE, Science</strong><br><em>Bal Bharati Public School, Noida &nbsp; | &nbsp; Percentage: 93.2%</em><br>2006 - 2019</p>", unsafe_allow_html=True)
+
+        st.markdown("<strong>Clubs and Activities</strong><br>📍 Served in the Student Council as the Secretary of the Infotech Club during the academic year 2016-17<br>📍 Participated in and won various interschool events related to Web Designing, Graphic Designing, Film-making and Gaming<br>📍 Awarded Special Achiever certificate for getting an Olympiad Rank of 42 in Level 2 of International Informatics Olympiad 2014-15<br>📍 Won 1st prize in Dialogue Category and 3rd prize in Content Category in the North East Film Festival organized by CBSE in October 2015", unsafe_allow_html=True)
+
+
+    st.write("---")
+
+    st.markdown("<h3 style='text-align:center;'>ONLINE COURSE CERTIFICATIONS</h3> <br>", unsafe_allow_html=True)
+
+    for course in all_courses:
+        course_img_col, course_detail_col = st.columns([1, 17])
+        if course.get("provider") == "Udemy":
+            img = udemy_img
+        elif course.get("provider") == "Coursera":
+            img = coursera_img
+        elif course.get("provider") == "LinkedIn":
+            img = linkedin_img
+        elif course.get("provider") == "Google":
+            img = google_img
+        else:
+            img = None
+
+        with course_img_col:
+            st.image(img, use_column_width=True)
+
+        with course_detail_col:
+            st.markdown(f"<p class='degree'><strong>{course.get('name')}</strong><br><em>{course.get('provider')}</em><br><strong><a href='{course.get('verification link')}' style='color: #ff4b4b;'>Verify</a></strong></p>", unsafe_allow_html=True)
+
+            
+            st.write("---")
+
+
+
+
 
 
 if selected == "Experience":
