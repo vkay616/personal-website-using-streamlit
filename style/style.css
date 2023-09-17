@@ -5,3 +5,24 @@
 .degree {
     margin-top: -0.3%;
 }
+
+h3 {
+    text-align: center;
+}
+
+.j-text {
+    text-align: justify;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ff4b4b;
+    text-decoration: none;
+}
+
+.centered {
+    text-align: center;
+}
