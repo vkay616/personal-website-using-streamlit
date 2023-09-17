@@ -26,3 +26,22 @@ a:hover {
 .centered {
     text-align: center;
 }
+
+.project {
+    width: 100%;
+    border: 4px solid #262730;
+    padding: 2%;
+}
+
+.project:hover {
+    background-color: #262730;
+    color: #ffffff;
+}
+
+.project:hover h5 {
+    color: #ffffff;
+}
+
+.tmn {
+    margin-top: -5%;
+}

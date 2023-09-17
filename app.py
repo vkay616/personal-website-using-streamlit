@@ -227,5 +227,80 @@ if selected == "Experience":
 
 
 if selected == "Projects":
-    st.write("Projects")
+    
+    st.markdown("<h3>PROJECTS</h3><br>", unsafe_allow_html=True)
+
+
+    p1, p2, p3, p4 = st.columns(4)
+
+    with p1:
+        st.markdown("<div class='project'><h5 class='centered'>AutoML App</h5><p class='centered tmn highlight'><em>Python, Streamlit, PyCaret, Pandas Profiling</em></p><p class='j-text'>Built and deployed a Streamlit app where the user can upload data and automate the EDA and ML model training process.</p><p class='centered'><strong><a href='https://automl-app-616.streamlit.app/'>View Site</a> &nbsp; | &nbsp; <a href='https://github.com/vkay616/AutoML-app-using-streamlit'>View Code</a></strong></p></div>", unsafe_allow_html=True)
+
+    with p2:
+        st.markdown("<div class='project'><h5 class='centered'>Library Management System</h5><p class='centered tmn highlight'><em>Python, Django, Bootstrap</em></p><p class='j-text'>A library management system where the user can login/logout, issue and return books.</p><br><p class='centered'><strong><a href='https://vkay616.pythonanywhere.com/'>View Site</a> &nbsp; | &nbsp; <a href='https://github.com/vkay616/library-management-website-Django'>View Code</a></strong></p></div>", unsafe_allow_html=True)
+
+
+    with p3:
+        st.markdown("<div class='project'><h5 class='centered'>Notes App</h5><p class='centered tmn highlight'><em>Python, Django, JavaScript, React, CSS</em></p><p class='j-text'>A note taking application, where the user can perform CRUD operations like creating, editing, deleting and viewing notes.</p><p class='centered'><strong><a href='https://github.com/vkay616/django-react-notes-app'>View Code</a></strong></p></div>", unsafe_allow_html=True)
+
+    with p4:
+        st.markdown("<div class='project'><h5 class='centered'>Stock Monitoring Dashboard</h5><p class='centered tmn highlight'><em>Python, Plotly-Dash, Scikit-Learn, TensorFlow</em></p><p class='j-text'>A stock monitoring dashboard which updates in real-time by scraping data from Google Finance website.</p><p class='centered'><strong><a href='https://github.com/vkay616/stock-price-monitoring-dashboard-using-plotly-dash'>View Code</a></strong></p></div>", unsafe_allow_html=True)
+
+    st.write("")
+
+   
+   
+   
+   
+    p1, p2, p3, p4 = st.columns(4)
+
+    with p1:
+        st.markdown("<div class='project'><h5 class='centered'>Books API</h5><p class='centered tmn highlight'><em>Go, Gin, Colly</em></p><p class='j-text'>A simple API built using Gin Framework. It has 3 endpoints, to GET all books, to GET book by its ID and the last one to POST new book.</p><p class='centered'><strong><a href='https://github.com/vkay616/BooksAPI-using-Go'>View Code</a></strong></p></div>", unsafe_allow_html=True)
+
+    with p2:
+        st.markdown("<div class='project'><h5 class='centered'>Stock Market Simulator</h5><p class='centered tmn highlight'><em>Python, Flask, TailwindCSS</em></p><p class='j-text'>Built a stock market simulator where users can choose to buy/sell stocks whose prices are changed by a random value every second.</p><p class='centered'><strong><a href='https://github.com/vkay616/library-management-website-Django'>View Code</a></strong></p></div>", unsafe_allow_html=True)
+
+
+    with p3:
+        st.markdown("<div class='project'><h5 class='centered'>Todo App</h5><p class='centered tmn highlight'><em>Python, Django, Flask</em></p><p class='j-text'>A todo web app where the user can perform basic CRUD operations like create, edit, view and delete tasks.</p><p class='centered'><strong><a href='https://github.com/vkay616/todo-app-using-Flask'>View Code</a></strong></p></div>", unsafe_allow_html=True)
+
+    with p4:
+        st.markdown("<div class='project'><h5 class='centered'>Kyphosis Disease Prediction</h5><p class='centered tmn highlight'><em>Python, Scikit-Learn, LaTeX</em></p><p class='j-text'>Applied ML algorithms with feature scaling methods like Power Transform and Quantile Transform to predict kyphosis in children.</p><p class='centered'><strong><a href='https://ieeexplore.ieee.org/document/9984343'>View Paper</a> &nbsp; | &nbsp; <a href='https://github.com/vkay616/kyphosis-disease-prediction-using-RandomizedSearchCV-and-AdaBoost'>View Code</a></strong></p></div>", unsafe_allow_html=True)
+
+    st.write("")
+    
+    
+    
+    p1, p2, p3, p4 = st.columns(4)
+
+    with p1:
+        st.markdown("<div class='project'><h5 class='centered'>Electrical Load Forecasting</h5><p class='centered tmn highlight'><em>Python, Scikit-Learn, TensorFlow, Statsmodel</em></p><p class='j-text'>Engineered a short-term load forecasting model using ARIMA and LSTM, and compared its performance with traditional ML models.</p><p class='centered'><strong><a href='https://drive.google.com/file/d/1IE3JFF3g9hSxhW_8hX2nZKzZF-mDjw_U/view'>View Paper</a></strong></p></div>", unsafe_allow_html=True)
+
+    with p2:
+        st.markdown("<div class='project'><h5 class='centered'>Singapore Buildings' Info Extractor</h5><p class='centered tmn highlight'><em>Python, Selenium, Pillow, Pytesseract</em></p><p class='j-text'>Built a scraper to fetch the allowed limit of floors, type of buildings for a specific postal code in Singapore from ura.gov.sg/maps.</p><p class='centered'><strong><a href='https://github.com/vkay616/ura-singapore-land-information-scraper'>View Code</a></strong></p></div>", unsafe_allow_html=True)
+
+
+    with p3:
+        st.markdown("<div class='project'><h5 class='centered'>Real-Time Gender Detection</h5><p class='centered tmn highlight'><em>Python, OpenCV, TensorFlow</em></p><p class='j-text'>An app that can detect a person's gender in real-time. The model was trained using a dataset of around 2500 images.</p><p class='centered'><strong><a href='https://github.com/vkay616/real-time-gender-detection'>View Code</a></strong></p></div>", unsafe_allow_html=True)
+
+    with p4:
+        st.markdown("<div class='project'><h5 class='centered'>Student Management System</h5><p class='centered tmn highlight'><em>Python, SQLite, Tkinter</em></p><p class='j-text'>A GUI based student management system where the user can perform CRUD operations on a students database.</p><p class='centered'><strong><a href='https://github.com/vkay616/student-management-system-using-sqlite-and-tkinter'>View Code</a></strong></p></div>", unsafe_allow_html=True)
+
+    st.write("")
+
+
+    p1, p2, p3, p4 = st.columns(4)
+
+    with p1:
+        st.markdown("<div class='project'><h5 class='centered'>Lottery Smart Contract App</h5><p class='centered tmn highlight'><em>Solidity, JavaScript, React, Mocha</em></p><p class='j-text'>Built & deployed a tested smart contract on Sepolia Test Network. Players can enter lottery by paying min. 0.01 ether.</p><p class='centered'><strong><a href='https://github.com/vkay616/lottery-contract-react-app'>View Code</a></strong></p></div>", unsafe_allow_html=True)
+
+    with p2:
+        st.markdown("<div class='project'><h5 class='centered'>File Upload App</h5><p class='centered tmn highlight'><em>Python, Flask</em></p><p class='j-text'>A file uploading app (pdf and txt only) with user authentication using Flask Login.</p><br><p class='centered'><strong><a href='https://github.com/vkay616/flask-file-upload-app-with-user-authentication'>View Code</a></strong></p></div>", unsafe_allow_html=True)
+
+
+    with p3:
+        pass
+
+    with p4:
+        pass
 
